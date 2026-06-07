@@ -11,12 +11,26 @@ x-non-mutual-checker
 ## 方法一：GitHub 网页上传
 
 1. 登录 GitHub。
-2. 点击右上角 `+`，选择 `New repository`。
-3. Repository name 填：`x-non-mutual-checker`。
-4. 选择 `Public`。
-5. 不要勾选自动创建 README、.gitignore、License，本项目已经包含。
-6. 创建仓库后，选择 `uploading an existing file`。
+2. 点击右上角 `+`，选择“新建仓库”。
+3. 仓库名称填：`x-non-mutual-checker`。
+4. 选择“公开”。
+5. 不要勾选自动创建 README、.gitignore、许可证，本项目已经包含。
+6. 创建仓库后，选择“上传现有文件”。
 7. 上传本目录下所有文件。
+
+## 发布扩展包给用户下载
+
+源码上传后，建议再创建一个“发行版”，让普通用户直接下载 zip。
+
+1. 打开仓库首页。
+2. 点击右侧“发行版”。
+3. 点击“创建新发行版”。
+4. 标签填写：`v0.2.1`。
+5. 标题填写：`X 未互关检查助手 v0.2.1`。
+6. 在“资产”区域上传 `x-unfollow-helper.zip`。
+7. 点击“发布发行版”。
+
+发布后，用户就可以在“发行版”的“资产”里下载 `x-unfollow-helper.zip`。
 
 ## 方法二：本地 Git 推送
 
