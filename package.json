@@ -1,0 +1,12 @@
+{
+  "name": "x-non-mutual-checker",
+  "version": "0.2.1",
+  "private": true,
+  "description": "Chrome/Edge extension for checking X/Twitter accounts that do not show a follows-you label.",
+  "scripts": {
+    "test": "node tests/relationship-detection.test.js",
+    "check": "node --check contentScript.js && node --check popup.js && node --check background.js",
+    "docs:images": "python scripts/generate_tutorial_images.py"
+  },
+  "license": "MIT"
+}

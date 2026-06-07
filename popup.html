@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>X 取关提醒助手</title>
+    <link rel="stylesheet" href="popup.css">
+  </head>
+  <body>
+    <main class="shell">
+      <header class="topbar">
+        <div>
+          <h1>X 未互关检查助手</h1>
+          <p id="pageStatus">正在读取当前页面...</p>
+        </div>
+        <button id="openX" class="icon-button" title="打开 X">
+          <img src="icons/icon-32.png" alt="">
+        </button>
+      </header>
+
+      <section class="panel">
+        <label for="profileInput">账号</label>
+        <div class="row">
+          <input id="profileInput" type="text" placeholder="例如 yourname">
+          <button id="usePageProfile">使用当前页</button>
+        </div>
+      </section>
+
+      <section class="panel">
+        <div class="section-title">
+          <h2>采集快照</h2>
+          <span id="listTypeBadge">未识别列表页</span>
+        </div>
+        <div class="button-grid">
+          <button id="collectVisible">采集当前可见</button>
+          <button id="scanList">自动滚动采集</button>
+        </div>
+        <button id="calibratedScan" class="wide-action">从主页校准扫描</button>
+        <div id="scanProgress" class="progress" hidden></div>
+        <p class="hint">请在你的 <code>/followers</code> 或 <code>/following</code> 页面使用。数据只保存在本地浏览器。</p>
+      </section>
+
+      <section class="panel stats">
+        <div class="removed">
+          <strong id="followersCount">-</strong>
+          <span>粉丝快照</span>
+        </div>
+        <div>
+          <strong id="followingCount">-</strong>
+          <span>关注快照</span>
+        </div>
+        <div class="removed">
+          <strong id="alertCount">-</strong>
+          <span>取关提醒</span>
+        </div>
+        <div>
+          <strong id="nonMutualCount">-</strong>
+          <span>未互关</span>
+        </div>
+      </section>
+
+      <section class="panel">
+        <div class="section-title">
+          <h2 id="listTitle">当前未互关</h2>
+          <button id="refreshData" class="small">刷新</button>
+        </div>
+        <div class="view-switch removed" role="tablist" aria-label="名单类型">
+          <button id="showLostAlerts" class="active" type="button">取关提醒</button>
+          <button id="showNonMutual" type="button">当前未互关</button>
+        </div>
+        <div class="bulk-actions">
+          <button id="openSelected" disabled>打开所选</button>
+          <button id="markSelectedDone" class="removed" disabled>标记已处理</button>
+        </div>
+        <div id="alertsList" class="alerts"></div>
+      </section>
+
+      <section class="panel danger-zone">
+        <button id="exportData">导出 JSON</button>
+        <button id="clearAccount">清空此账号数据</button>
+      </section>
+    </main>
+
+    <script src="popup.js"></script>
+  </body>
+</html>
